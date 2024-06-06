@@ -1,0 +1,15 @@
+:root{
+  --mycolorprimary: #08207c;
+}
+
+body{
+  background-color: #cacddd
+}
+
+.bg-mycolorprimary{
+  background: var(--mycolorprimary);
+}
+
+.text-mycolorprimary{
+  color: var(--mycolorprimary);
+}

@@ -1,0 +1,28 @@
+<div class="container" >
+  <hr class="">
+  <h1 class="text-center my-2 text-mycolorprimary fw-bold">Modificaciones de bitacora</h1>
+    <div class=" border border-primary-subtle bg-white p-3 rounded  shadow m-4 w-100"  >
+      <form [formGroup]="formularioPrincipal" (ngSubmit)="BuscarAlertaDinamica()">
+  
+        <div class="row ">
+          <div class="col-12 col-sm-6 col-lg-4 ">
+            <label class="form-label">Fecha Inicial</label>
+            <input type="date" formControlName="fechainicio" class="form-control form-control-sm my-0 py-1" id="fechainicio">
+          </div>
+          
+          <div class="col-12 col-sm-6 col-lg-4">
+            <label class="form-label">Fecha Final</label>
+            <input type="date" formControlName="fechafin" class="form-control form-control-sm my-0 py-1" id="endate" name="endate">
+          </div>
+  
+          <div class="col-12 col-lg-4 d-flex align-items-start flex-column justify-content-center">
+            <button type="submit"  id="btn_calculate"  name="btn_calculate" class="btn w-100 btn-dark fw-bold ExecuteQueryprimary btn_validatedate my-1" style="background-color:var(--mycolorprimary) ">Calcular</button>
+          </div>
+        </div>
+        
+      </form>
+    </div>
+   </div>
+   
+  
+   
