@@ -7,6 +7,12 @@ import { MenubitacoraComponent } from './alertas/bitacora/menubitacora/menubitac
 import { ModificaciondecomprasbitacoraComponent } from './alertas/bitacora/modificaciondecomprasbitacora/modificaciondecomprasbitacora.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CancelacionesDeComprasBitacoraComponent } from './alertas/bitacora/cancelaciones-de-compras-bitacora/cancelaciones-de-compras-bitacora.component';
+import { CancelacionesdefacturaRemisionNotadeventaComponent } from './alertas/bitacora/cancelacionesdefactura-remision-notadeventa/cancelacionesdefactura-remision-notadeventa.component';
+import { ComprasSinGastoSobreCompraComponent } from './alertas/documentos/compras-sin-gasto-sobre-compra/compras-sin-gasto-sobre-compra.component';
+import { DocumentosComponent } from './alertas/documentos/documentos.component';
+import { ComprasSinDescuentoProntoPagoComponent } from './alertas/documentos/compras-sin-descuento-pronto-pago/compras-sin-descuento-pronto-pago.component';
+import { EliminacionDeDocumentosNotasRemisionesComponent } from './alertas/bitacora/eliminacion-de-documentos-notas-remisiones/eliminacion-de-documentos-notas-remisiones.component';
 
 
 const routes: Routes = [
@@ -14,9 +20,14 @@ const routes: Routes = [
   {path: 'MenuAlertas', component: MenuAlertasComponent},
   {path: 'MenuConfiguracion', component: MenuConfiguracionComponent},
   {path: 'Alertas/Bitacoras', component: MenubitacoraComponent},
+  {path: 'Alertas/Documentos', component: DocumentosComponent},
+  {path: 'Alertas/Documentos/comprassingastosobrecompra', component: ComprasSinGastoSobreCompraComponent},
+  {path: 'Alertas/Documentos/comprassinfechaprontopago', component: ComprasSinDescuentoProntoPagoComponent},
+  {path: 'Alertas/bitacoras/EliminacionDeDocumentosNotasRemisiones', component: EliminacionDeDocumentosNotasRemisionesComponent},
   {path: 'Alertas/bitacoras/Modificaciondecomprasbitacora', component: ModificaciondecomprasbitacoraComponent},
+  {path: 'Alertas/bitacoras/CancelacionesDeComprasBitacora', component: CancelacionesDeComprasBitacoraComponent},
+  {path: 'Alertas/bitacoras/CancelacionesdefacturaRemisionNotadeventa', component: CancelacionesdefacturaRemisionNotadeventaComponent},
 ];
-
 
 @NgModule({
   imports: [

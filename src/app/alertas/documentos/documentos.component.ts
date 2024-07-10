@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './documentos.component.css'
 })
 export class DocumentosComponent {
+  titulo = 'Alertas de Documentos';
 
 }
