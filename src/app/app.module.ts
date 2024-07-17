@@ -21,6 +21,8 @@ import { CancelacionesdefacturaRemisionNotadeventaComponent } from './alertas/bi
 import { ComprasSinGastoSobreCompraComponent } from './alertas/documentos/compras-sin-gasto-sobre-compra/compras-sin-gasto-sobre-compra.component';
 import { ComprasSinDescuentoProntoPagoComponent } from './alertas/documentos/compras-sin-descuento-pronto-pago/compras-sin-descuento-pronto-pago.component';
 import { EliminacionDeDocumentosNotasRemisionesComponent } from './alertas/bitacora/eliminacion-de-documentos-notas-remisiones/eliminacion-de-documentos-notas-remisiones.component';
+import { MenualmacenComponent } from './alertas/almacen/menualmacen/menualmacen.component';
+import { ProductosConAlmacenamientoMinimoComponent } from './alertas/almacen/productos-con-almacenamiento-minimo/productos-con-almacenamiento-minimo.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { EliminacionDeDocumentosNotasRemisionesComponent } from './alertas/bitac
     CancelacionesdefacturaRemisionNotadeventaComponent,
     ComprasSinGastoSobreCompraComponent,
     ComprasSinDescuentoProntoPagoComponent,
-    EliminacionDeDocumentosNotasRemisionesComponent
+    EliminacionDeDocumentosNotasRemisionesComponent,
+    MenualmacenComponent,
+    ProductosConAlmacenamientoMinimoComponent
   ],
   imports: [
     BrowserModule,

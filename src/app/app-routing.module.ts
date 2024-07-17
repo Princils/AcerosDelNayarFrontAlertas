@@ -13,6 +13,8 @@ import { ComprasSinGastoSobreCompraComponent } from './alertas/documentos/compra
 import { DocumentosComponent } from './alertas/documentos/documentos.component';
 import { ComprasSinDescuentoProntoPagoComponent } from './alertas/documentos/compras-sin-descuento-pronto-pago/compras-sin-descuento-pronto-pago.component';
 import { EliminacionDeDocumentosNotasRemisionesComponent } from './alertas/bitacora/eliminacion-de-documentos-notas-remisiones/eliminacion-de-documentos-notas-remisiones.component';
+import { MenualmacenComponent } from './alertas/almacen/menualmacen/menualmacen.component';
+import { ProductosConAlmacenamientoMinimoComponent } from './alertas/almacen/productos-con-almacenamiento-minimo/productos-con-almacenamiento-minimo.component';
 
 
 const routes: Routes = [
@@ -21,6 +23,8 @@ const routes: Routes = [
   {path: 'MenuConfiguracion', component: MenuConfiguracionComponent},
   {path: 'Alertas/Bitacoras', component: MenubitacoraComponent},
   {path: 'Alertas/Documentos', component: DocumentosComponent},
+  {path: 'Alertas/Almacen', component: MenualmacenComponent},
+  {path: 'Alertas/Almacen/productosconalmacenamientominimo', component: ProductosConAlmacenamientoMinimoComponent},
   {path: 'Alertas/Documentos/comprassingastosobrecompra', component: ComprasSinGastoSobreCompraComponent},
   {path: 'Alertas/Documentos/comprassinfechaprontopago', component: ComprasSinDescuentoProntoPagoComponent},
   {path: 'Alertas/bitacoras/EliminacionDeDocumentosNotasRemisiones', component: EliminacionDeDocumentosNotasRemisionesComponent},
