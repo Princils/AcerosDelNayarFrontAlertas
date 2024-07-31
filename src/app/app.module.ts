@@ -15,6 +15,14 @@ import { MenuConfiguracionComponent } from './configuracion/menu-configuracion/m
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterLink } from '@angular/router';
+import { CancelacionesDeComprasBitacoraComponent } from './alertas/bitacora/cancelaciones-de-compras-bitacora/cancelaciones-de-compras-bitacora.component';
+import { DataTablesModule } from 'angular-datatables';
+import { CancelacionesdefacturaRemisionNotadeventaComponent } from './alertas/bitacora/cancelacionesdefactura-remision-notadeventa/cancelacionesdefactura-remision-notadeventa.component';
+import { ComprasSinGastoSobreCompraComponent } from './alertas/documentos/compras-sin-gasto-sobre-compra/compras-sin-gasto-sobre-compra.component';
+import { ComprasSinDescuentoProntoPagoComponent } from './alertas/documentos/compras-sin-descuento-pronto-pago/compras-sin-descuento-pronto-pago.component';
+import { EliminacionDeDocumentosNotasRemisionesComponent } from './alertas/bitacora/eliminacion-de-documentos-notas-remisiones/eliminacion-de-documentos-notas-remisiones.component';
+import { MenualmacenComponent } from './alertas/almacen/menualmacen/menualmacen.component';
+import { ProductosConAlmacenamientoMinimoComponent } from './alertas/almacen/productos-con-almacenamiento-minimo/productos-con-almacenamiento-minimo.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +35,14 @@ import { RouterLink } from '@angular/router';
     InicioComponent,
     AccesoRapidoComponent,
     NabvarComponent,
-    MenuConfiguracionComponent
+    MenuConfiguracionComponent,
+    CancelacionesDeComprasBitacoraComponent,
+    CancelacionesdefacturaRemisionNotadeventaComponent,
+    ComprasSinGastoSobreCompraComponent,
+    ComprasSinDescuentoProntoPagoComponent,
+    EliminacionDeDocumentosNotasRemisionesComponent,
+    MenualmacenComponent,
+    ProductosConAlmacenamientoMinimoComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +50,8 @@ import { RouterLink } from '@angular/router';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterLink
+    RouterLink,
+    DataTablesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,65 @@
+<div *ngIf="!loading">
+    <div class="container " >
+      <hr class="">
+      <h1 class="text-center my-2 text-mycolorprimary fw-bold">Eliminación de documentos Notas-Remisiones</h1>
+        <div class=" border border-primary-subtle bg-white p-3 rounded  shadow my-4 w-100"  >
+          <form [formGroup]="formularioPrincipal" (ngSubmit)="BuscarAlertaDinamica()">
+      
+            <div class="row ">
+              <div class="col-12 col-sm-6 col-lg-4">
+                <label class="form-label">Fecha Inicial</label>
+                <input type="date" formControlName="fechainicio" class="form-control form-control-sm my-0 py-1" id="fechainicio">
+              </div>
+    
+              <div class="col-12 col-sm-6 col-lg-4">
+                <label class="form-label">Fecha Final</label>
+                <input type="date" formControlName="fechafin" class="form-control form-control-sm my-0 py-1" id="endate" name="endate">
+              </div>
+    
+              <div class="col-12 col-lg-4 d-flex align-items-start flex-column justify-content-center">
+                <button type="submit" id="btn_calculate" name="btn_calculate" class="btn w-100 btn-dark fw-bold ExecuteQueryprimary btn_validatedate my-1" style="background-color: var(--mycolorprimary);" [disabled]="formularioPrincipal.invalid">Calcular</button>
+              </div>
+            </div>
+            
+          </form>
+        </div>
+        
+    </div>
+    <div class="container-sm px-sm-0 px-2" style="    height: 50vh; overflow: auto;">
+      <table class="table rounded texttabla "  >
+        <thead class="text-white text-center " >
+            <tr>
+                <th class="headtable " scope="col">#</th>
+                <th class="headtable " scope="col">Fecha</th>
+                <th class="headtable " scope="col">Hora</th>
+                <th class="headtable " scope="col">Datos</th>
+                <th class="headtable " scope="col">proceso</th>
+                <th class="headtable " scope="col">Usuario</th>
+              </tr>
+        </thead>
+        <tbody>
+          <!-- Angular *ngFor loop -->
+          <tr *ngFor="let data of DataPrincipal?.message; let i = index">
+              <td scope="row">{{i+1}}</td>
+              <td>{{data.Fecha}}</td>
+              <td>{{data.Hora}}</td>
+              <td>{{data.Datos}}</td>
+              <td>{{data.proceso}}</td>
+              <td>{{data.Usuario}}</td>
+          </tr>
+          <!-- Angular *ngIf check -->
+          <tr *ngIf="!DataPrincipal?.message || DataPrincipal?.message?.length === 0">
+              <td scope="row" colspan="6">No se encontró ningún registro</td>
+          </tr>
+      </tbody>
+      </table>
+    </div>
+
+</div>
+    
+    <!-- modificaciondecomprasbitacora.component.html -->
+    <div *ngIf="loading" class="loader">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>

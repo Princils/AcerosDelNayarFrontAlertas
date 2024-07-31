@@ -1,13 +1,13 @@
-import { Component, OnInit} from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReportesBitacoraService } from '../../../servicios/alertas/bitacora/reportes-bitacora.service';
 
 @Component({
-  selector: 'app-modificaciondecomprasbitacora',
-  templateUrl: './modificaciondecomprasbitacora.component.html',
-  styleUrl: './modificaciondecomprasbitacora.component.css'
+  selector: 'app-eliminacion-de-documentos-notas-remisiones',
+  templateUrl: './eliminacion-de-documentos-notas-remisiones.component.html',
+  styleUrl: './eliminacion-de-documentos-notas-remisiones.component.css'
 })
-export class ModificaciondecomprasbitacoraComponent implements OnInit{
+export class EliminacionDeDocumentosNotasRemisionesComponent {
 
   DataPrincipal: any;
   loading: boolean = false; // Loader state
@@ -50,7 +50,7 @@ ngOnInit(): void {
 
   BuscarAlertaDinamica(): any {
     this.loading = true; // Start loader
-    this.ReportesBitacoraService.PostModificacionesDeComprasBitacoras(this.formularioPrincipal.value).subscribe(
+    this.ReportesBitacoraService.PostEliminacionDeDocumentosNotasRemisionesBitacora(this.formularioPrincipal.value).subscribe(
       respuesta => {
        this.DataPrincipal = respuesta;
        this.loading = false; // Stop loader
@@ -71,5 +71,4 @@ ngOnInit(): void {
     }
     return null;
   }
-
 }

@@ -1,49 +1,31 @@
- <!-- DataTales Example -->
- <div class="card shadow m-4">
-    <div class="card-body">
-      <form id="frm_principal" action="POST" autocomplete="off">
-        <div class="row">
-          <div class="col-12 col-md-4 my-2">
-            <label class="form-label"><small style="font-size: 10px;" id="startagent" >Agente Inicial</small></label>
-            <input type="text" name="startagentval" id="inp_filter_startagent" class="form-control form-control-sm">
-            <label class="form-label"><small style="font-size: 10px;" id="endagent">Agente Final</small></label>
-            <input type="text" name="endagentval" id="inp_filter_endagent" class="form-control form-control-sm">
-          </div>
-          <div class="col-12 col-md-4  my-2">
-            <label class="form-label">Fecha Inicial</label>
-            <input type="date" class="form-control form-control-sm py-1" name="startdate" id="startdate">
-            <label class="form-label">Fecha Final</label>
-            <input type="date" disabled class="form-control form-control-sm py-1" name="endate" id="endate">
-          </div>
-  
-          <div class="col-12">
-            <button type="button" id="btn_calculate" disabled name="btn_calculate" class="btn_validatedate bg-mycolorprimary btn  w-100  fw-bold BtnCalcularReportePrincipal" >Calcular</button>
-          </div>
-        </div>
-      </form>
+
+<div class="container">
+  <app-vista-titulo titulo="{{titulo}}" ></app-vista-titulo>
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2">
+      <div class="col text-center my-2">
+          <a
+          routerLink="/Alertas/Documentos/comprassingastosobrecompra"
+          class="btn btn-primary w-100 bg-mycolorprimary">
+              Compras sin gasto sobre compras
+          </a>
+      </div>
+      <div class="col text-center my-2">
+        <a
+        routerLink="/Alertas/Documentos/comprassinfechaprontopago"
+        class="btn btn-primary w-100 bg-mycolorprimary">
+            Compras sin fecha pronto pago
+        </a>
     </div>
-    <!-- End DataTales Example -->
+
   </div>
-  
-  <div class="container">
-    <h1 class="text-center mb-2">Angular jQuery Datatables Example - Tutsmake.com</h1>
-    <div class="row mt-2">
-      <div class="col-lg-10 mx-auto">
-    <table id="example" class="display" class="table mx-auto">
-  
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Title</th>
-        <th>Body</th>
-      </tr>
-    </thead>
-      <tbody>
-        <!-- DataTable will populate rows here -->
-      </tbody>
-  </table>
-    </div>
-    </div>
-  </div>
-  
-  
+</div>
+
+
+
+
+
+
+
+
+

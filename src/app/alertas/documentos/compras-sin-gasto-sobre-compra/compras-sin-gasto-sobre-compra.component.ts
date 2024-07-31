@@ -1,13 +1,14 @@
 import { Component, OnInit} from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ReportesBitacoraService } from '../../../servicios/alertas/bitacora/reportes-bitacora.service';
+import { ReportesDocumentosService } from '../../../servicios/alertas/documentos/reportes-documentos.service';
 
 @Component({
-  selector: 'app-modificaciondecomprasbitacora',
-  templateUrl: './modificaciondecomprasbitacora.component.html',
-  styleUrl: './modificaciondecomprasbitacora.component.css'
+  selector: 'app-compras-sin-gasto-sobre-compra',
+  templateUrl: './compras-sin-gasto-sobre-compra.component.html',
+  styleUrl: './compras-sin-gasto-sobre-compra.component.css'
 })
-export class ModificaciondecomprasbitacoraComponent implements OnInit{
+export class ComprasSinGastoSobreCompraComponent {
 
   DataPrincipal: any;
   loading: boolean = false; // Loader state
@@ -15,7 +16,7 @@ export class ModificaciondecomprasbitacoraComponent implements OnInit{
 
   constructor(
     public formulario:FormBuilder,
-    private ReportesBitacoraService:ReportesBitacoraService
+    private ReportesDocumentosService:ReportesDocumentosService
   ) {
     this.formularioPrincipal = this.formulario.group({
       fechainicio: ['', Validators.required],
@@ -26,6 +27,8 @@ export class ModificaciondecomprasbitacoraComponent implements OnInit{
   }
 
 ngOnInit(): void {
+
+
     this.formularioPrincipal.get('fechainicio')?.valueChanges.subscribe(fechainicio => {
       const fechafinControl = this.formularioPrincipal.get('fechafin');
       
@@ -48,21 +51,36 @@ ngOnInit(): void {
     });
   }
 
+  /**
+   * Función BuscarAlertaDinamica.
+   * Esta función se encarga de buscar alertas dinámicas.
+   * Inicia el cargador, realiza una solicitud POST al servicio ReportesBitacoraService,
+   * y maneja la respuesta y el error en consecuencia.
+   * @returns {any} La respuesta de la llamada a la API.
+   */
   BuscarAlertaDinamica(): any {
-    this.loading = true; // Start loader
-    this.ReportesBitacoraService.PostModificacionesDeComprasBitacoras(this.formularioPrincipal.value).subscribe(
+    this.loading = true; // Iniciar cargador
+    this.ReportesDocumentosService.PostComprasSinGastosSobreCompras(this.formularioPrincipal.value).subscribe(
       respuesta => {
        this.DataPrincipal = respuesta;
-       this.loading = false; // Stop loader
+       this.loading = false; // Detener cargador
       },
       error => {
         console.error('Error:', error);
-        this.loading = false; // Stop loader
+        this.loading = false; // Detener cargador
       }
     );
   }
 
 
+  /**
+   * Valida las fechas de inicio y fin en un formulario.
+   * Si la fecha de inicio es mayor que la fecha de fin, se devuelve un objeto con la propiedad "fechaInvalida" establecida en true.
+   * En caso contrario, se devuelve null.
+   * 
+   * @param form El formulario que contiene las fechas de inicio y fin.
+   * @returns Un objeto con la propiedad "fechaInvalida" establecida en true si la fecha de inicio es mayor que la fecha de fin, o null en caso contrario.
+   */
   fechaValidator(form: FormGroup) {
     const fechainicio = form.get('fechainicio')?.value;
     const fechafin = form.get('fechafin')?.value;
