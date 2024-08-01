@@ -23,6 +23,7 @@ import { ComprasSinDescuentoProntoPagoComponent } from './alertas/documentos/com
 import { EliminacionDeDocumentosNotasRemisionesComponent } from './alertas/bitacora/eliminacion-de-documentos-notas-remisiones/eliminacion-de-documentos-notas-remisiones.component';
 import { MenualmacenComponent } from './alertas/almacen/menualmacen/menualmacen.component';
 import { ProductosConAlmacenamientoMinimoComponent } from './alertas/almacen/productos-con-almacenamiento-minimo/productos-con-almacenamiento-minimo.component';
+import { FacturasVencidasDiaAntesComponent } from './alertas/documentos/facturas-vencidas-dia-antes/facturas-vencidas-dia-antes.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ProductosConAlmacenamientoMinimoComponent } from './alertas/almacen/pro
     ComprasSinDescuentoProntoPagoComponent,
     EliminacionDeDocumentosNotasRemisionesComponent,
     MenualmacenComponent,
-    ProductosConAlmacenamientoMinimoComponent
+    ProductosConAlmacenamientoMinimoComponent,
+    FacturasVencidasDiaAntesComponent
   ],
   imports: [
     BrowserModule,

@@ -20,5 +20,9 @@ export class ReportesDocumentosService {
   PostComprasSinFechaDescuentoProntoPagoDocumentos(formulario: any): Observable<any> {
     return this.clientHttp.post(API_URL + "alert/documentos/ComprasSinFechaDescuentoProntoPagoDocumentos", formulario);
   }
+
+  PostFacturasVencidasDiaAntes(formulario: any): Observable<any> {
+    return this.clientHttp.post(API_URL + "alert/documentos/FacturasVencidasDiaAntes", formulario);
+  }
   
 }

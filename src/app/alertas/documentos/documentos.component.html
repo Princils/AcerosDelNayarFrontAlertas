@@ -3,19 +3,28 @@
   <app-vista-titulo titulo="{{titulo}}" ></app-vista-titulo>
 
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2">
-      <div class="col text-center my-2">
-          <a
+    <div class="col text-center my-2">
+      <a
           routerLink="/Alertas/Documentos/comprassingastosobrecompra"
           class="btn btn-primary w-100 bg-mycolorprimary">
-              Compras sin gasto sobre compras
-          </a>
-      </div>
-      <div class="col text-center my-2">
-        <a
+            Compras sin gasto sobre compras
+      </a>
+    </div>
+    <div class="col text-center my-2">
+      <a
         routerLink="/Alertas/Documentos/comprassinfechaprontopago"
         class="btn btn-primary w-100 bg-mycolorprimary">
-            Compras sin fecha pronto pago
-        </a>
+          Compras sin fecha pronto pago
+      </a>
+    </div>
+
+    <!--	Alerta de facturas vencidas de proveedores “compras” , campo de fecha de vencimiento , alertar un dia antes -->
+    <div class="col text-center my-2">
+      <a
+        routerLink="/Alertas/Documentos/facturasvencidasdiaantes"
+        class="btn btn-primary w-100 bg-mycolorprimary">
+          Facturas vencidas un día antes
+      </a>
     </div>
 
   </div>
