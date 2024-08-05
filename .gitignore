@@ -40,3 +40,10 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+
+# API
+/src/app/config/api-config.ts
+
+#Carpeta dist
+/dist

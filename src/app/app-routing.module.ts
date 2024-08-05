@@ -15,6 +15,9 @@ import { ComprasSinDescuentoProntoPagoComponent } from './alertas/documentos/com
 import { EliminacionDeDocumentosNotasRemisionesComponent } from './alertas/bitacora/eliminacion-de-documentos-notas-remisiones/eliminacion-de-documentos-notas-remisiones.component';
 import { MenualmacenComponent } from './alertas/almacen/menualmacen/menualmacen.component';
 import { ProductosConAlmacenamientoMinimoComponent } from './alertas/almacen/productos-con-almacenamiento-minimo/productos-con-almacenamiento-minimo.component';
+import { FacturasVencidasDiaAntesComponent } from './alertas/documentos/facturas-vencidas-dia-antes/facturas-vencidas-dia-antes.component';
+import { FacturasConPago99YConPPDComponent } from './alertas/documentos/facturas-con-pago99-ycon-ppd/facturas-con-pago99-ycon-ppd.component';
+import { FacturasConFormaDePagoDistintaA99Component } from './alertas/documentos/facturas-con-forma-de-pago-distinta-a99/facturas-con-forma-de-pago-distinta-a99.component';
 
 
 const routes: Routes = [
@@ -27,6 +30,12 @@ const routes: Routes = [
   {path: 'Alertas/Almacen/productosconalmacenamientominimo', component: ProductosConAlmacenamientoMinimoComponent},
   {path: 'Alertas/Documentos/comprassingastosobrecompra', component: ComprasSinGastoSobreCompraComponent},
   {path: 'Alertas/Documentos/comprassinfechaprontopago', component: ComprasSinDescuentoProntoPagoComponent},
+  {path: 'Alertas/Documentos/facturasvencidasdiaantes', component: FacturasVencidasDiaAntesComponent},
+  {path: 'Alertas/Documentos/facturasconpago99yconppd', component: FacturasConPago99YConPPDComponent},
+  {path: 'Alertas/Documentos/facturasconformadepagodistintaa99', component: FacturasConFormaDePagoDistintaA99Component},
+  
+
+  
   {path: 'Alertas/bitacoras/EliminacionDeDocumentosNotasRemisiones', component: EliminacionDeDocumentosNotasRemisionesComponent},
   {path: 'Alertas/bitacoras/Modificaciondecomprasbitacora', component: ModificaciondecomprasbitacoraComponent},
   {path: 'Alertas/bitacoras/CancelacionesDeComprasBitacora', component: CancelacionesDeComprasBitacoraComponent},
