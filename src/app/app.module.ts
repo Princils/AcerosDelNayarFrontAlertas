@@ -24,6 +24,8 @@ import { EliminacionDeDocumentosNotasRemisionesComponent } from './alertas/bitac
 import { MenualmacenComponent } from './alertas/almacen/menualmacen/menualmacen.component';
 import { ProductosConAlmacenamientoMinimoComponent } from './alertas/almacen/productos-con-almacenamiento-minimo/productos-con-almacenamiento-minimo.component';
 import { FacturasVencidasDiaAntesComponent } from './alertas/documentos/facturas-vencidas-dia-antes/facturas-vencidas-dia-antes.component';
+import { FacturasConPago99YConPPDComponent } from './alertas/documentos/facturas-con-pago99-ycon-ppd/facturas-con-pago99-ycon-ppd.component';
+import { FacturasConFormaDePagoDistintaA99Component } from './alertas/documentos/facturas-con-forma-de-pago-distinta-a99/facturas-con-forma-de-pago-distinta-a99.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { FacturasVencidasDiaAntesComponent } from './alertas/documentos/facturas
     EliminacionDeDocumentosNotasRemisionesComponent,
     MenualmacenComponent,
     ProductosConAlmacenamientoMinimoComponent,
-    FacturasVencidasDiaAntesComponent
+    FacturasVencidasDiaAntesComponent,
+    FacturasConPago99YConPPDComponent,
+    FacturasConFormaDePagoDistintaA99Component,
   ],
   imports: [
     BrowserModule,
