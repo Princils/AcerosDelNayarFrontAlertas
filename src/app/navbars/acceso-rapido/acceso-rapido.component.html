@@ -1,55 +1,65 @@
-
-<div class="container">
-
-  <div class="d-flex justify-content-center ">
-      <a routerLink=""
-      class="p-3 mt-3 btn btn-primary shadow-sm mx-2 rounded-circle bg-mycolorprimary"
-      data-toggle="tooltip"
-      data-placement="bottom"
-      title="Inicio"
-      style="max-width: 60px;">
-       <i class="fa-solid fa-paper-plane text-light"></i>
-   </a>
-   <a routerLink="MenuAlertas"
-      class="p-3 mt-3 btn btn-primary shadow-sm mx-2 rounded-circle bg-mycolorprimary"
-      data-toggle="tooltip"
-      data-placement="bottom"
-      title="Alertas"
-      style="max-width: 60px;">
-       <i class="fa-solid fa-paper-plane text-light"></i>
-   </a>
-
-      <a routerLink="MenuConfiguracion"
-      class="p-3 mt-3 btn btn-primary shadow-sm mx-2 rounded-circle bg-mycolorprimary"
-      data-toggle="tooltip"
-      data-placement="top"
-      title="Menu Configuración"
-      style="max-width: 60px;">
-          <i class="fa-solid fa-paper-plane text-light"></i>
-      </a>
-      <a routerLink="Alertas/Documentos"
-      class="p-3 mt-3 btn btn-primary shadow-sm mx-2 rounded-circle bg-mycolorprimary"
-      data-toggle="tooltip"
-      data-placement="top"
-      title="Alertas/Documentos"
-      style="max-width: 60px;">
-          <i class="fa-solid fa-paper-plane text-light"></i>
-      </a>
-      <a routerLink="#"
-      class="p-3 mt-3 btn btn-primary shadow-sm mx-2 rounded-circle bg-mycolorprimary"
-      data-toggle="tooltip"
-      data-placement="top"
-      title="Acceso rapido"
-      style="max-width: 60px;">
-          <i class="fa-solid fa-paper-plane text-light"></i>
-      </a>
-      <a routerLink="#"
-      class="p-3 mt-3 btn btn-primary shadow-sm mx-2 rounded-circle bg-mycolorprimary"
-      data-toggle="tooltip"
-      data-placement="top"
-      title="Acceso rapido"
-      style="max-width: 60px;">
-          <i class="fa-solid fa-paper-plane text-light"></i>
-      </a>
+<div class="container mx-auto">
+  <div class="flex justify-center space-x-4 mt-3">
+    <a routerLink=""
+       routerLinkActive="active-link animate-pulse"
+       [routerLinkActiveOptions]="{ exact: true }"
+       class="p-3 btn btn-mycolorprimary shadow-sm rounded-full"
+       data-toggle="tooltip"
+       data-placement="bottom"
+       title="Inicio"
+       aria-label="Inicio"
+       style="max-width: 60px;">
+       <i class="fa-solid fa-paper-plane text-2xl"></i>
+    </a>
+    <a routerLink="MenuAlertas"
+       routerLinkActive="active-link animate-pulse"
+       class="p-3 btn btn-mycolorprimary shadow-sm rounded-full"
+       data-toggle="tooltip"
+       data-placement="bottom"
+       title="Alertas"
+       aria-label="Alertas"
+       style="max-width: 60px;">
+       <i class="fa-solid fa-paper-plane text-2xl"></i>
+    </a>
+    <a routerLink="MenuConfiguracion"
+       routerLinkActive="active-link animate-pulse"
+       class="p-3 btn btn-mycolorprimary shadow-sm rounded-full"
+       data-toggle="tooltip"
+       data-placement="top"
+       title="Menu Configuración"
+       aria-label="Menu Configuración"
+       style="max-width: 60px;">
+       <i class="fa-solid fa-paper-plane text-2xl"></i>
+    </a>
+    <a routerLink="Alertas/Documentos"
+       routerLinkActive="active-link animate-pulse"
+       class="p-3 btn btn-mycolorprimary shadow-sm rounded-full"
+       data-toggle="tooltip"
+       data-placement="top"
+       title="Alertas/Documentos"
+       aria-label="Alertas/Documentos"
+       style="max-width: 60px;">
+       <i class="fa-solid fa-paper-plane text-2xl"></i>
+    </a>
+    <a routerLink="#"
+       routerLinkActive="active-link animate-pulse"
+       class="p-3 btn btn-mycolorprimary shadow-sm rounded-full"
+       data-toggle="tooltip"
+       data-placement="top"
+       title="Acceso rápido"
+       aria-label="Acceso rápido"
+       style="max-width: 60px;">
+       <i class="fa-solid fa-paper-plane text-2xl"></i>
+    </a>
+    <a routerLink="#"
+       routerLinkActive="active-link animate-pulse"
+       class="p-3 btn btn-mycolorprimary shadow-sm rounded-full"
+       data-toggle="tooltip"
+       data-placement="top"
+       title="Acceso rápido"
+       aria-label="Acceso rápido"
+       style="max-width: 60px;">
+       <i class="fa-solid fa-paper-plane text-2xl"></i>
+    </a>
   </div>
 </div>

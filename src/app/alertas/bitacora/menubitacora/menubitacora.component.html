@@ -1,48 +1,37 @@
+<div class="container mx-auto my-4">
+    <app-vista-titulo titulo="{{titulo}}"></app-vista-titulo>
 
-<div class="container">
-    <app-vista-titulo titulo="{{titulo}}" ></app-vista-titulo>
-
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2">
-        <div class="col text-center my-2">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 mt-4">
+        <div class="text-center">
             <a
             routerLink="/Alertas/bitacoras/Modificaciondecomprasbitacora"
-            class="btn btn-primary w-100 bg-mycolorprimary">
+            class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-l font-medium rounded-lg border border-transparent bg-mycolorprimary text-white hover:bg-mycolorprimary focus:outline-none focus:bg-mycolorprimary disabled:opacity-50 disabled:pointer-events-none">
                 Modificaciones de compras
             </a>
         </div>
 
-        <div class="col text-center my-2">
+        <div class="text-center">
             <a
             routerLink="/Alertas/bitacoras/CancelacionesDeComprasBitacora"
-            class="btn btn-primary w-100 bg-mycolorprimary">
+            class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-l font-medium rounded-lg border border-transparent bg-mycolorprimary text-white hover:bg-mycolorprimary focus:outline-none focus:bg-mycolorprimary disabled:opacity-50 disabled:pointer-events-none">
                 Cancelacion de compras
             </a>
         </div>
 
-        <div class="col text-center my-2">
+        <div class="text-center">
             <a
             routerLink="/Alertas/bitacoras/CancelacionesdefacturaRemisionNotadeventa"
-            class="btn btn-primary w-100 bg-mycolorprimary">
+            class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-l font-medium rounded-lg border border-transparent bg-mycolorprimary text-white hover:bg-mycolorprimary focus:outline-none focus:bg-mycolorprimary disabled:opacity-50 disabled:pointer-events-none">
                 Cancelacion de Facturas/Remisiones/Notas de ventas
             </a>
         </div>
 
-        <div class="col text-center my-2">
+        <div class="text-center">
             <a
             routerLink="/Alertas/bitacoras/EliminacionDeDocumentosNotasRemisiones"
-            class="btn btn-primary w-100 bg-mycolorprimary">
+            class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-l font-medium rounded-lg border border-transparent bg-mycolorprimary text-white hover:bg-mycolorprimary focus:outline-none focus:bg-mycolorprimary disabled:opacity-50 disabled:pointer-events-none">
                 Eliminación de documentos Notas/Remisiones
             </a>
         </div>
     </div>
-    
 </div>
-
-
-
-
-
-
-
-
-

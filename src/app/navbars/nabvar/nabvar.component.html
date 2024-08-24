@@ -1,75 +1,104 @@
-<nav class="navbar navbar-expand navbar-light navbar-dark bg-mycolorprimary" >
-    <!-- Container wrapper -->
-    <div class="container-fluid">
-      <!-- Toggle button -->
-      <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse" 
-      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" 
-      aria-label="Toggle navigation"
+<div class="space-y-4">
+  <header class="flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-mycolorprimary text-sm py-3">
+    <nav class="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between">
+      <div class="flex items-center justify-between">
+        <div class="sm:hidden">
+          <button
+            type="button"
+            class="hs-collapse-toggle relative size-7 flex justify-center items-center gap-2 rounded-lg border border-white/20 font-medium bg-mycolorprimary text-white shadow-sm align-middle hover:bg-white/10 focus:outline-none focus:bg-white/10 text-sm"
+            id="hs-navbar-primary-collapse"
+            aria-expanded="false"
+            aria-controls="hs-navbar-primary"
+            aria-label="Toggle navigation"
+            data-hs-collapse="#hs-navbar-primary"
+          >
+            <svg
+              class="hs-collapse-open:hidden shrink-0 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="3" x2="21" y1="6" y2="6" />
+              <line x1="3" x2="21" y1="12" y2="12" />
+              <line x1="3" x2="21" y1="18" y2="18" />
+            </svg>
+            <svg
+              class="hs-collapse-open:block hidden shrink-0 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        id="hs-navbar-primary"
+        class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow sm:block"
+        aria-labelledby="hs-navbar-primary-collapse"
       >
-      <i class="fas fa-bars"></i>
-    </button>
-  
-    <!-- Collapsible wrapper -->
-    <div
-    class="collapse navbar-collapse justify-content-center"
-    id="navbarSupportedContent"
-    >
-    <!-- Left links -->
-    <ul class="navbar-nav mb-2 justify-content-center mb-lg-0">
-      <li class="nav-item mx-1">
-        <a class="nav-link" aria-current="page"  routerLink="/"
-          data-toggle="tooltip"
-          data-placement="bottom"
-          title="Inicio"
-        >
-          <i class="fa-solid fa-house icono_grande"></i> <!--INICIO-->
-        </a>
-      </li>
-  
-      <li class="nav-item mx-1">
-        <a class="nav-link" aria-current="page" routerLink="/MenuAlertas"
-          data-toggle="tooltip"
-          data-placement="bottom"
-          title="Alertas"
-        >
-          <i class="fa-solid fa-triangle-exclamation icono_grande"></i> <!--ALERTAS-->
-        </a>
-      </li>
-  
-      <li class="nav-item mx-1">
-        <a class="nav-link"
-          aria-current="page"
-          routerLink="MenuConfiguracion"
-          data-toggle="tooltip"
-          data-placement="bottom"
-          title="Inicio"
-        >
-          <i class="fa-solid fa-gears icono_grande"></i> <!--CONFIGURACION-->
-        </a>
-      </li>
-  
-      <li class="nav-item mx-1">
-        <a class="nav-link"
-          aria-current="page"
-          href="http://localhost/AcerosDelNayar/index.php?view=homepage"
-          data-toggle="tooltip"
-          data-placement="bottom"
-          data-bs-custom-class="custom-tooltip"
-          title="Cerrar sesion"
-        >
-          <i class="fa-solid fa-door-open icono_grande"></i> <!--SALIR-->
-        </a>
-      </li>
-  
-  
-    </ul>
-    <!-- Left links -->
-  </div>
-  <!-- Collapsible wrapper -->
-  </div>
-  <!-- Container wrapper -->
-  </nav>
-  
+        <div class="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-center sm:mt-0 sm:ps-5">
+          <a
+            class="nav-link text-white"
+            aria-current="page"
+            routerLink="/"
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="Inicio"
+          >
+            <i class="fa-solid fa-house text-3xl"></i>
+            <!--INICIO-->
+          </a>
+          <a
+            class="nav-link text-white"
+            aria-current="page"
+            routerLink="/MenuAlertas"
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="Alertas"
+          >
+            <i class="fa-solid fa-triangle-exclamation text-3xl"></i>
+            <!--ALERTAS-->
+          </a>
+          <a
+            class="nav-link text-white"
+            aria-current="page"
+            routerLink="MenuConfiguracion"
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="Configuración"
+          >
+            <i class="fa-solid fa-gears text-3xl"></i>
+            <!--CONFIGURACION-->
+          </a>
+          <a
+            class="nav-link text-white"
+            aria-current="page"
+            href="http://localhost/AcerosDelNayar/index.php?view=homepage"
+            data-toggle="tooltip"
+            data-placement="bottom"
+            data-bs-custom-class="custom-tooltip"
+            title="Cerrar sesión"
+          >
+            <i class="fa-solid fa-door-open text-3xl"></i>
+            <!--SALIR-->
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>

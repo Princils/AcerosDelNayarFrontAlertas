@@ -1,65 +1,151 @@
 <div *ngIf="!loading">
-    <div class="container " >
-      <hr class="">
-      <h1 class="text-center my-2 text-mycolorprimary fw-bold">Eliminación de documentos Notas-Remisiones</h1>
-        <div class=" border border-primary-subtle bg-white p-3 rounded  shadow my-4 w-100"  >
-          <form [formGroup]="formularioPrincipal" (ngSubmit)="BuscarAlertaDinamica()">
-      
-            <div class="row ">
-              <div class="col-12 col-sm-6 col-lg-4">
-                <label class="form-label">Fecha Inicial</label>
-                <input type="date" formControlName="fechainicio" class="form-control form-control-sm my-0 py-1" id="fechainicio">
+  <div class="container mx-auto my-4">
+    <hr class="border-t-2 border-mycolorprimary w-full mt-2">
+    <h1 class="text-center text-2xl my-2 text-mycolorprimary font-bold">Eliminación de documentos Notas-Remisiones</h1>
+
+    <button type="button"
+      class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-l font-medium rounded-lg border border-transparent bg-mycolorprimary text-white hover:bg-mycolorprimary focus:outline-none focus:bg-mycolorprimary disabled:opacity-50 disabled:pointer-events-none"
+      aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-large-modal" data-hs-overlay="#hs-large-modal">
+      Parámetros de envíos
+    </button>
+
+    <div id="hs-large-modal"
+      class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none"
+      role="dialog" tabindex="-1" aria-labelledby="hs-large-modal-label">
+      <div
+        class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all lg:max-w-4xl lg:w-full m-3 lg:mx-auto">
+        <div class="flex flex-col bg-white border shadow-sm rounded-xl pointer-events-auto ">
+          <div class="flex justify-between items-center py-3 px-4 border-b ">
+            <h3 id="hs-large-modal-label" class="font-bold text-gray-800 ">
+              TITULO
+            </h3>
+            <button type="button"
+              class="size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent bg-red-400 text-white hover:bg-gray-200 focus:outline-none focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none "
+              aria-label="Close" data-hs-overlay="#hs-large-modal">
+              <span class="sr-only">Close</span>
+              <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6 6 18"></path>
+                <path d="m6 6 12 12"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="p-4 overflow-y-auto">
+            <!-- Inicio modal contenido -->
+            <div class="flex items-center space-x-4">
+              <div class="flex-grow max-w-sm">
+                <label for="input1" class="block text-sm font-medium mb-2">CORREO</label>
+                <input type="email" id="input1"
+                  class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-mycolorprimary focus:ring-mycolorprimary disabled:opacity-50 disabled:pointer-events-none"
+                  placeholder="you@site.com">
               </div>
-    
-              <div class="col-12 col-sm-6 col-lg-4">
-                <label class="form-label">Fecha Final</label>
-                <input type="date" formControlName="fechafin" class="form-control form-control-sm my-0 py-1" id="endate" name="endate">
+              <div class="flex-grow max-w-sm">
+                <label for="input2" class="block text-sm font-medium mb-2">AREA/PERSONA</label>
+                <input type="text" id="input2"
+                  class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-mycolorprimary focus:ring-mycolorprimary disabled:opacity-50 disabled:pointer-events-none"
+                  placeholder="Área o Persona">
               </div>
-    
-              <div class="col-12 col-lg-4 d-flex align-items-start flex-column justify-content-center">
-                <button type="submit" id="btn_calculate" name="btn_calculate" class="btn w-100 btn-dark fw-bold ExecuteQueryprimary btn_validatedate my-1" style="background-color: var(--mycolorprimary);" [disabled]="formularioPrincipal.invalid">Calcular</button>
+              <div class="flex-grow max-w-sm">
+                <label for="input3" class="block text-sm font-medium mb-2">TELÉFONO</label>
+                <input type="text" id="input3"
+                  class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-mycolorprimary focus:ring-mycolorprimary disabled:opacity-50 disabled:pointer-events-none"
+                  placeholder="Teléfono">
+              </div>
+              <div class="flex-shrink-0 self-end">
+                <button type="button"
+                  class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-teal-500 text-white hover:bg-teal-600 focus:outline-none focus:bg-teal-600 disabled:opacity-50 disabled:pointer-events-none">
+                  <i class="fa fa-plus-square" aria-hidden="true"></i>
+                  AGREGAR
+                </button>
               </div>
             </div>
-            
-          </form>
-        </div>
-        
-    </div>
-    <div class="container-sm px-sm-0 px-2" style="    height: 50vh; overflow: auto;">
-      <table class="table rounded texttabla "  >
-        <thead class="text-white text-center " >
-            <tr>
-                <th class="headtable " scope="col">#</th>
-                <th class="headtable " scope="col">Fecha</th>
-                <th class="headtable " scope="col">Hora</th>
-                <th class="headtable " scope="col">Datos</th>
-                <th class="headtable " scope="col">proceso</th>
-                <th class="headtable " scope="col">Usuario</th>
-              </tr>
-        </thead>
-        <tbody>
-          <!-- Angular *ngFor loop -->
-          <tr *ngFor="let data of DataPrincipal?.message; let i = index">
-              <td scope="row">{{i+1}}</td>
-              <td>{{data.Fecha}}</td>
-              <td>{{data.Hora}}</td>
-              <td>{{data.Datos}}</td>
-              <td>{{data.proceso}}</td>
-              <td>{{data.Usuario}}</td>
-          </tr>
-          <!-- Angular *ngIf check -->
-          <tr *ngIf="!DataPrincipal?.message || DataPrincipal?.message?.length === 0">
-              <td scope="row" colspan="6">No se encontró ningún registro</td>
-          </tr>
-      </tbody>
-      </table>
-    </div>
+            <!-- Fin modal contenido -->
 
-</div>
-    
-    <!-- modificaciondecomprasbitacora.component.html -->
-    <div *ngIf="loading" class="loader">
-      <div class="spinner-border text-primary" role="status">
-        <span class="visually-hidden">Loading...</span>
+            <!-- Inicio tabla -->
+            <div class="mt-8 overflow-x-auto">
+              <table id="parametros" class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-mycolorprimary text-white">
+                  <tr>
+                    <th scope="col" class="px-4 py-2">CORREO</th>
+                    <th scope="col" class="px-4 py-2">AREA/PERSONA</th>
+                    <th scope="col" class="px-4 py-2">TELÉFONO</th>
+                    <th scope="col" class="px-4 py-2">ELIMINAR</th>
+                  </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                  <!-- Aquí se agregarán dinámicamente las filas -->
+                </tbody>
+              </table>
+            </div>
+            <!-- Fin tabla -->
+
+          </div>
+          <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t ">
+            <button type="button"
+              class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-red-600 text-white shadow-sm  disabled:opacity-50 disabled:pointer-events-none "
+              data-hs-overlay="#hs-large-modal">
+              Cerrar
+            </button>
+          </div>
+        </div>
       </div>
     </div>
+
+    <div class="border border-primary-subtle bg-white p-10 rounded shadow my-4 w-full">
+      <form [formGroup]="formularioPrincipal" (ngSubmit)="BuscarAlertaDinamica()">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="flex flex-col">
+            <label class="block text-lg font-medium mb-2">Fecha Inicial</label>
+            <input type="date" formControlName="fechainicio"
+              class="py-3 px-5 block w-full border-gray-200 rounded-full text-sm focus:border-mycolorprimary focus:ring-mycolorprimary disabled:opacity-50 disabled:pointer-events-none"
+              id="fechainicio">
+          </div>
+          <div class="flex flex-col">
+            <label class="block text-lg font-medium mb-2">Fecha Final</label>
+            <input type="date" formControlName="fechafin"
+              class="py-3 px-5 block w-full border-gray-200 rounded-full text-sm focus:border-mycolorprimary focus:ring-mycolorprimary disabled:opacity-50 disabled:pointer-events-none"
+              id="endate" name="endate">
+          </div>
+          <div class="flex items-end justify-center">
+            <button type="submit" id="btn_calculate" name="btn_calculate"
+              class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-l font-medium rounded-lg border border-transparent bg-mycolorprimary text-white hover:bg-mycolorprimary focus:outline-none focus:bg-mycolorprimary disabled:opacity-50 disabled:pointer-events-none"
+              [disabled]="formularioPrincipal.invalid">Calcular</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="container mx-auto px-2" style="height: 50vh; overflow: auto;">
+      <table id="dataTable" class="table-auto w-full rounded text-center">
+        <thead class="bg-mycolorprimary text-white">
+          <tr>
+            <th class="px-4 py-2">#</th>
+            <th class="px-4 py-2">Fecha</th>
+            <th class="px-4 py-2">Hora</th>
+            <th class="px-4 py-2">Datos</th>
+            <th class="px-4 py-2">Proceso</th>
+            <th class="px-4 py-2">Usuario</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          <!-- Angular *ngFor loop -->
+          <tr *ngFor="let data of DataPrincipal?.message; let i = index">
+            <td scope="row">{{i+1}}</td>
+            <td>{{data.Fecha}}</td>
+            <td>{{data.Hora}}</td>
+            <td>{{data.Datos}}</td>
+            <td>{{data.proceso}}</td>
+            <td>{{data.Usuario}}</td>
+          </tr>
+          <!-- Angular *ngIf check -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div *ngIf="loading" class="loader flex justify-center items-center">
+    <div class="spinner-border text-mycolorprimary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+</div>
