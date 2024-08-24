@@ -28,11 +28,11 @@ export class ModificaciondecomprasbitacoraComponent implements OnInit{
 ngOnInit(): void {
     this.formularioPrincipal.get('fechainicio')?.valueChanges.subscribe(fechainicio => {
       const fechafinControl = this.formularioPrincipal.get('fechafin');
-      
+
       if (fechainicio) {
         fechafinControl?.enable();
         const fechafin = fechafinControl?.value;
-        
+
         // If fechainicio is greater than fechafin, reset fechafin
         if (fechafin && fechainicio > fechafin) {
           fechafinControl.setValue('');
@@ -70,6 +70,57 @@ ngOnInit(): void {
       return { fechaInvalida: true };
     }
     return null;
+  }
+
+
+
+  ngAfterViewInit(): void {
+    $(document).ready(function () {
+      $('#parametros').DataTable({
+        language: {
+          "decimal": "",
+          "emptyTable": "No hay información",
+          "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+          "infoEmpty": "Mostrando 0 a 0 de 0 Entradas",
+          "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+          "infoPostFix": "",
+          "thousands": ",",
+          "lengthMenu": "Mostrar _MENU_ Entradas",
+          "loadingRecords": "Cargando...",
+          "processing": "Procesando...",
+          "search": "Buscar:",
+          "zeroRecords": "Sin resultados encontrados",
+          "paginate": {
+              "first": "Primero",
+              "last": "Ultimo",
+              "next": "Siguiente",
+              "previous": "Anterior"
+          }
+      },
+      });
+      $('#dataTable').DataTable({
+        language: {
+          "decimal": "",
+          "emptyTable": "No hay información",
+          "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+          "infoEmpty": "Mostrando 0 a 0 de 0 Entradas",
+          "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+          "infoPostFix": "",
+          "thousands": ",",
+          "lengthMenu": "Mostrar _MENU_ Entradas",
+          "loadingRecords": "Cargando...",
+          "processing": "Procesando...",
+          "search": "Buscar:",
+          "zeroRecords": "Sin resultados encontrados",
+          "paginate": {
+              "first": "Primero",
+              "last": "Ultimo",
+              "next": "Siguiente",
+              "previous": "Anterior"
+          }
+      },
+      });
+    });
   }
 
 }

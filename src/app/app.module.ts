@@ -58,6 +58,7 @@ import { FacturasConFormaDePagoDistintaA99Component } from './alertas/documentos
     HttpClientModule,
     RouterLink,
     DataTablesModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,56 +1,41 @@
+<div class="container mx-auto my-4">
+    <app-vista-titulo titulo="{{titulo}}"></app-vista-titulo>
 
-<div class="container">
-  <app-vista-titulo titulo="{{titulo}}" ></app-vista-titulo>
-
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2">
-    <div class="col text-center my-2">
-      <a
-          routerLink="/Alertas/Documentos/comprassingastosobrecompra"
-          class="btn btn-primary w-100 bg-mycolorprimary">
-            Compras sin gasto sobre compras
-      </a>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 mt-4">
+        <div class="text-center my-2">
+            <a
+                routerLink="/Alertas/Documentos/comprassingastosobrecompra"
+                class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-l font-medium rounded-lg border border-transparent bg-mycolorprimary text-white hover:bg-mycolorprimary focus:outline-none focus:bg-mycolorprimary disabled:opacity-50 disabled:pointer-events-none">
+                Compras sin gasto sobre compras
+            </a>
+        </div>
+        <div class="text-center my-2">
+            <a
+                routerLink="/Alertas/Documentos/comprassinfechaprontopago"
+                class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-l font-medium rounded-lg border border-transparent bg-mycolorprimary text-white hover:bg-mycolorprimary focus:outline-none focus:bg-mycolorprimary disabled:opacity-50 disabled:pointer-events-none">
+                Compras sin fecha pronto pago
+            </a>
+        </div>
+        <div class="text-center my-2">
+            <a
+                routerLink="/Alertas/Documentos/facturasvencidasdiaantes"
+                class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-l font-medium rounded-lg border border-transparent bg-mycolorprimary text-white hover:bg-mycolorprimary focus:outline-none focus:bg-mycolorprimary disabled:opacity-50 disabled:pointer-events-none">
+                Facturas vencidas un día antes
+            </a>
+        </div>
+        <div class="text-center my-2">
+            <a
+                routerLink="/Alertas/Documentos/facturasconpago99yconppd"
+                class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-l font-medium rounded-lg border border-transparent bg-mycolorprimary text-white hover:bg-mycolorprimary focus:outline-none focus:bg-mycolorprimary disabled:opacity-50 disabled:pointer-events-none">
+                Facturas con pago 99 y con metodo de pago PPD
+            </a>
+        </div>
+        <div class="text-center my-2">
+            <a
+                routerLink="/Alertas/Documentos/facturasconformadepagodistintaa99"
+                class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-l font-medium rounded-lg border border-transparent bg-mycolorprimary text-white hover:bg-mycolorprimary focus:outline-none focus:bg-mycolorprimary disabled:opacity-50 disabled:pointer-events-none">
+                Facturas con forma de pago distinta a 99
+            </a>
+        </div>
     </div>
-    <div class="col text-center my-2">
-      <a
-        routerLink="/Alertas/Documentos/comprassinfechaprontopago"
-        class="btn btn-primary w-100 bg-mycolorprimary">
-          Compras sin fecha pronto pago
-      </a>
-    </div>
-
-    <!--	Alerta de facturas vencidas de proveedores “compras” , campo de fecha de vencimiento , alertar un dia antes -->
-    <div class="col text-center my-2">
-      <a
-        routerLink="/Alertas/Documentos/facturasvencidasdiaantes"
-        class="btn btn-primary w-100 bg-mycolorprimary">
-          Facturas vencidas un día antes
-      </a>
-    </div>
-
-    <!--	Alerta de facturas con pago 99 y con metodo de pago PPD -->
-    <div class="col text-center my-2">
-      <a
-        routerLink="/Alertas/Documentos/facturasconpago99yconppd"
-        class="btn btn-primary w-100 bg-mycolorprimary">
-          Facturas con pago 99 y con metodo de pago PPD
-      </a>
-    </div>
-
-    <!--	Alerta de facturas con forma de pago distinta a 99 -->
-    <div class="col text-center my-2">
-      <a
-        routerLink="/Alertas/Documentos/facturasconformadepagodistintaa99"
-        class="btn btn-primary w-100 bg-mycolorprimary">
-          Facturas con forma de pago distinta a 99
-      </a>
-    
 </div>
-
-
-
-
-
-
-
-
-

@@ -1,38 +1,27 @@
+<div class="container mx-auto p-4">
+    <app-vista-titulo titulo="{{titulo}}"></app-vista-titulo>
 
-<div class="container">
-    <app-vista-titulo titulo="{{titulo}}" ></app-vista-titulo>
-
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2">
-        <div class="col text-center my-2">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 mt-4">
+        <div class="text-center">
             <a
             routerLink="/Alertas/Bitacoras"
-            class="btn btn-primary w-100 bg-mycolorprimary">
+            class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-l font-medium rounded-lg border border-transparent bg-mycolorprimary text-white hover:bg-mycolorprimaryfocus:outline-none focus:bg-mycolorprimarydisabled:opacity-50 disabled:pointer-events-none">
             Bitacoras
             </a>
         </div>
-        <div class="col text-center my-2">
+        <div class="text-center">
             <a
             routerLink="/Alertas/Documentos"
-            class="btn btn-primary w-100 bg-mycolorprimary">
+            class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-l font-medium rounded-lg border border-transparent bg-mycolorprimary text-white hover:bg-mycolorprimaryfocus:outline-none focus:bg-mycolorprimarydisabled:opacity-50 disabled:pointer-events-none">
             Documentos
             </a>
         </div>
-        <div class="col text-center my-2">
+        <div class="text-center">
             <a
             routerLink="/Alertas/Almacen"
-            class="btn btn-primary w-100 bg-mycolorprimary">
+            class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-l font-medium rounded-lg border border-transparent bg-mycolorprimary text-white hover:bg-mycolorprimaryfocus:outline-none focus:bg-mycolorprimarydisabled:opacity-50 disabled:pointer-events-none">
             Almacen
             </a>
         </div>
     </div>
-
 </div>
-
-
-
-
-
-
-
-
-
