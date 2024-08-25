@@ -3,6 +3,10 @@
   color: white;
 }
 
+.btn:hover {
+  background-color: #08207ccc;
+}
+
 .active-link {
   background-color: white !important;
 }
@@ -10,3 +14,4 @@
 .active-link i {
   color: var(--mycolorprimary) !important;
 }
+

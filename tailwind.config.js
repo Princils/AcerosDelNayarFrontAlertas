@@ -8,6 +8,7 @@
     extend: {
       colors: {
         'mycolorprimary': '#08207c',
+        'primaryhover': '#f7f7f7f7',
       },
     },
   },

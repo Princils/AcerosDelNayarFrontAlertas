@@ -57,3 +57,11 @@ input[type="search"].dt-input:focus {
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3) !important;
   outline: none !important;
 }
+
+a.bg-mycolorprimary:hover,button.bg-mycolorprimary:hover {
+  background-color: #08207ccc !important;
+}
+
+button.bg-red-600:hover{
+  background-color: #f87171  !important;
+}
