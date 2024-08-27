@@ -49,16 +49,71 @@ ngOnInit(): void {
   }
 
   BuscarAlertaDinamica(): any {
-    this.loading = true; // Start loader
+    this.loading = true; // Iniciar cargador
+
+    // Destruir la instancia actual de DataTables si existe
+    if ($.fn.DataTable.isDataTable('#dataTable')) {
+        $('#dataTable').DataTable().destroy();
+    }
     this.ReportesBitacoraService.PostModificacionesDeComprasBitacoras(this.formularioPrincipal.value).subscribe(
       respuesta => {
        this.DataPrincipal = respuesta;
-       this.loading = false; // Stop loader
-      },
-      error => {
-        console.error('Error:', error);
-        this.loading = false; // Stop loader
-      }
+       this.loading = false; // Detener cargador
+  
+       // Reinicializar DataTables después de que los datos han sido actualizados
+       setTimeout(() => {
+         $('#parametros').DataTable({
+           language: {
+             "decimal": "",
+             "emptyTable": "No hay información",
+             "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+             "infoEmpty": "Mostrando 0 a 0 de 0 Entradas",
+             "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+             "infoPostFix": "",
+             "thousands": ",",
+             "lengthMenu": "Mostrar _MENU_ Entradas",
+             "loadingRecords": "Cargando...",
+             "processing": "Procesando...",
+             "search": "Buscar:",
+             "zeroRecords": "Sin resultados encontrados",
+             "paginate": {
+                 "first": "Primero",
+                 "last": "Ultimo",
+                 "next": "Siguiente",
+                 "previous": "Anterior"
+             }
+         },
+         });
+         $('#dataTable').DataTable({
+           language: {
+             "decimal": "",
+             "emptyTable": "No hay información",
+             "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+             "infoEmpty": "Mostrando 0 a 0 de 0 Entradas",
+             "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+             "infoPostFix": "",
+             "thousands": ",",
+             "lengthMenu": "Mostrar _MENU_ Entradas",
+             "loadingRecords": "Cargando...",
+             "processing": "Procesando...",
+             "search": "Buscar:",
+             "zeroRecords": "Sin resultados encontrados",
+             "paginate": {
+                 "first": "Primero",
+                 "last": "Ultimo",
+                 "next": "Siguiente",
+                 "previous": "Anterior"
+             }
+         },
+         });
+       }, 0); // Se usa timeout para asegurar que la tabla se ha renderizado antes de aplicar DataTables
+     },
+     error => {
+       console.error('Error:', error);
+       //dejamos el arreglo vacio para que no muestre datos en la tabla
+       this.DataPrincipal = [];
+       this.loading = false; // Detener cargador
+     }
     );
   }
 
